@@ -40,50 +40,45 @@ body {
   /*Triangle - (50% 0, 100% 100%, 0 100%)*/
   position: relative;
   /*relative to logo-box*/ }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 /*.logo:hover {
   animation: moveInRight 1s ease-out;
 }*/
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
   backface-visibility: hidden;
   /*stops tilt after animation. N/A here*/ }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 5s;
-  /*  animation-delay: 3s;
-  animation-iteration-count: 3;
-  animation-timing-function: ease-in-out;*/ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.74rem;
-  animation: moveInRight 5s ease-out;
-  /*short-cut*/ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    /*  animation-delay: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;*/ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 5s ease-out;
+    /*short-cut*/ }
 
 @keyframes moveInLeft {
   0% {
@@ -116,8 +111,7 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
