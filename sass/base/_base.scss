@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /*Prevents borders being added to width/height*/
+}
+
+/*this defines what one rem is*/
+html {
+  /*font-size: 10px;*/
+  font-size: 62.5%;   /*10/16 * 100*/
+}
+
+body {
+  box-sizing: border-box; /*Prevents borders being added to width/height*/
+}

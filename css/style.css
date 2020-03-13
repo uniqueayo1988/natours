@@ -14,71 +14,15 @@ Dark green: #28b485
   box-sizing: inherit;
   /*Prevents borders being added to width/height*/ }
 
+/*this defines what one rem is*/
 html {
   /*font-size: 10px;*/
   font-size: 62.5%;
   /*10/16 * 100*/ }
 
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box;
   /*Prevents borders being added to width/height*/ }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
-  /*hex in rgba only works in sass*/
-  background-size: cover;
-  /*tries to make image fit into port height/width*/
-  background-position: top;
-  /*image remains same at the top*/
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
-  position: relative;
-  /*relative to logo-box*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-/*.logo:hover {
-  animation: moveInRight 1s ease-out;
-}*/
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-  backface-visibility: hidden;
-  /*stops tilt after animation. N/A here*/ }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 5s;
-    /*  animation-delay: 3s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-in-out;*/ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 5s ease-out;
-    /*short-cut*/ }
 
 @keyframes moveInLeft {
   0% {
@@ -110,6 +54,40 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+
+/*.logo:hover {
+  animation: moveInRight 1s ease-out;
+}*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  /*stops tilt after animation. N/A here*/ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    /*  animation-delay: 3s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;*/ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 5s ease-out;
+    /*short-cut*/ }
 
 .btn:link, .btn:visited {
   text-decoration: none;
@@ -157,3 +135,28 @@ body {
   /*name duration timing-function delay*/
   animation-fill-mode: backwards;
   /*automatically applies effect at 0%*/ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  /*hex in rgba only works in sass*/
+  background-size: cover;
+  /*tries to make image fit into port height/width*/
+  background-position: top;
+  /*image remains same at the top*/
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
+  position: relative;
+  /*relative to logo-box*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
