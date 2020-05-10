@@ -7,9 +7,14 @@
   url('../img/hero.jpg'); /*hex in rgba only works in sass*/
   background-size: cover; /*tries to make image fit into port height/width*/
   background-position: top; /*image remains same at the top*/
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);  /*Triangle - (50% 0, 100% 100%, 0 100%)*/
   position: relative;   /*relative to logo-box*/
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); 
+  }
 
   &__logo-box {
     position: absolute;
